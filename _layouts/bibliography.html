@@ -1,0 +1,25 @@
+<div class="text-justify">{{ reference }}</div>
+      {% if link %}
+      <a href="{{ link}}" title="View/download PDF"><input type="button" value="PDF" /></a>
+      {% endif %}
+      {% if entry.doi %}
+      <a href="{{ entry.doi | prepend: 'http://doi.org/' }}" title="Digital Object Identifier"><input type="button" value="DOI" /></a>
+      {% endif %}
+      {% if entry.url %}
+      <a href="{{ entry.url}}" title="Open link"><input type="button" value="URL" /></a>
+      {% endif %}
+      <button title="Toggle BibTeX display" onclick="toggleBibtex{{entry.key}}()">BibTeX</button>
+      <div id="a{{entry.key}}" style="display: none;">
+      <pre>{{entry.bibtex}}</pre>
+      </div>
+      <br><br>
+      <script>
+	  function toggleBibtex{{entry.key}}(parameter) {
+      var x= document.getElementById('a{{entry.key}}');
+      if (x.style.display === 'none') {
+        x.style.display = 'block';
+      } else {
+        x.style.display = 'none';
+      }
+}
+</script>
