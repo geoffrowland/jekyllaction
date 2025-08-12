@@ -5,3 +5,15 @@ title: "Jekyll Actions Demo"
 # Plugins (previously gems:)
 plugins:
   - jekyll-scholar
+
+scholar:
+    #style: apa
+    style: _layouts/harvard-bournemouth-university.csl
+    sort_by: year,month
+    order: ascending,ascending
+    bibliography: references.bib
+    replace_strings: true
+    query: "@*"
+    repository: publications
+    bibliography_template: bibliography
+
