@@ -5,6 +5,7 @@ title: "Jekyll Actions Demo"
 # Plugins (previously gems:)
 plugins:
   - jekyll-scholar
+  - jekyll-include-cache
 
 scholar:
     #style: apa
