@@ -22,7 +22,6 @@ whitelist:
 
 theme: minimal-mistakes-jekyll
 
-
 scholar:
     #style: apa
     style: _layouts/harvard-bournemouth-university.csl
